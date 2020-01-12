@@ -4,10 +4,14 @@ const app = express();
 const mongoose = require("mongoose");
 require("dotenv/config");
 
+// Import routes
+const postsRoute = require("./routes/posts");
+
 // Middlewares (examples can be checking authentication)
-app.use("/login", () => {
-  console.log("Middleware running");
-});
+app.use("/posts", postsRoute);
+// app.use("/login", () => {
+//   console.log("Middleware running");
+// });
 
 // Routes (use patch:update delete:deleting get:to get info post:to give the info)
 app.get("/", (req, res) => {
