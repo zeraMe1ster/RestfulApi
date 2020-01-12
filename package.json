@@ -1,0 +1,23 @@
+{
+  "name": "restfulapi",
+  "version": "1.0.0",
+  "description": "Learning to build a Restful Api With Node.js Express &amp; MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeraMe1ster/RestfulApi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeraMe1ster/RestfulApi/issues"
+  },
+  "homepage": "https://github.com/zeraMe1ster/RestfulApi#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
