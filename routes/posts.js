@@ -5,4 +5,8 @@ router.get("/", (req, res) => {
   res.send("Login Page !");
 });
 
+router.get("/dashboard", (req, res) => {
+  res.send("Dashboard Page !");
+});
+
 module.exports = router;

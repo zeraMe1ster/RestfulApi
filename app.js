@@ -5,10 +5,10 @@ const mongoose = require("mongoose");
 require("dotenv/config");
 
 // Import routes
-const postsRoute = require("./routes/posts");
+const loginRoute = require("./routes/posts");
 
 // Middlewares (examples can be checking authentication)
-app.use("/posts", postsRoute);
+app.use("/login", loginRoute);
 // app.use("/login", () => {
 //   console.log("Middleware running");
 // });
