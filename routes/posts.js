@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Post = require("../models/Post");
 
-// * This code below gets backk all the POSTS
+// * This code below gets back all the POSTS
 router.get("/", async (req, res) => {
   try {
     const posts = await Post.find();
@@ -30,6 +30,17 @@ router.post("/", async (req, res) => {
 });
 
 // TODO create a specific posts
+
+router.get("/:postId", async (req, res) => {
+  // ! Testing purpose only =>> console.log(req.param.postId);
+
+  try {
+    const post = await Post.findById(req.params.postId);
+    res.json(post);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
 
 // ! Example that leads us to /login/dashboard route
 // router.get("/dashboard", (req, res) => {

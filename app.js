@@ -11,7 +11,7 @@ app.use(bodyparser.json());
 const loginRoute = require("./routes/posts");
 
 // Middlewares (examples can be checking authentication)
-app.use("/login/", loginRoute);
+app.use("/login", loginRoute);
 
 // ! Elvin wale part review later
 // app.use(express.urlencoded({ extended: true }));
