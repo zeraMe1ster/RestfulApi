@@ -53,7 +53,19 @@ router.delete("/:postId", async (req, res) => {
   }
 });
 
-// TODO Update / Patch part
+// // TODO Update / Patch part
+
+router.patch("/:postId", async (req, res) => {
+  try {
+    const updatePost = await Post.updateOne(
+      { _id: req.params.postId },
+      { $set: { title: req.body.title } }
+    );
+    res.json(updatePost);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
 
 // ! Example that leads us to /login/dashboard route
 // router.get("/dashboard", (req, res) => {
