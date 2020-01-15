@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Post = require("../models/Post");
 
-// * This code below gets back all the POSTS
+// ** This code below gets back all the POSTS **
 router.get("/", async (req, res) => {
   try {
     const posts = await Post.find();
@@ -12,10 +12,10 @@ router.get("/", async (req, res) => {
   }
 });
 
-// ** Submits a POST
+// ** Submits a POST **
 
 router.post("/", async (req, res) => {
-  // TODO Testing  purpose only : console.log(req.body);
+  // // TODO Testing  purpose only : console.log(req.body);
   const post = new Post({
     title: req.body.title,
     description: req.body.description
@@ -29,10 +29,10 @@ router.post("/", async (req, res) => {
   }
 });
 
-// TODO create a specific posts
+// // TODO create a specific posts
 
 router.get("/:postId", async (req, res) => {
-  // ! Testing purpose only =>> console.log(req.param.postId);
+  // !! Testing purpose only =>> console.log(req.param.postId); !!
 
   try {
     const post = await Post.findById(req.params.postId);
@@ -41,6 +41,8 @@ router.get("/:postId", async (req, res) => {
     res.json({ message: err });
   }
 });
+
+// TODO Delete a specific post
 
 // ! Example that leads us to /login/dashboard route
 // router.get("/dashboard", (req, res) => {
