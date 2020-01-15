@@ -2,13 +2,22 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const bodyparser = require("body-parser");
 require("dotenv/config");
+
+app.use(bodyparser.json());
 
 // Import routes
 const loginRoute = require("./routes/posts");
 
 // Middlewares (examples can be checking authentication)
-app.use("/login", loginRoute);
+app.use("/login/", loginRoute);
+
+// ! Elvin wale part review later
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+// ? Testing
 // app.use("/login", () => {
 //   console.log("Middleware running");
 // });
@@ -27,4 +36,6 @@ mongoose.connect(
 
 // Listen
 
-app.listen(3000);
+app.listen(3300);
+
+// git rm --cached -f .env (Remove this from here later)
