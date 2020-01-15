@@ -42,7 +42,7 @@ router.get("/:postId", async (req, res) => {
   }
 });
 
-// TODO Delete a specific post
+// // TODO Delete a specific post
 
 router.delete("/:postId", async (req, res) => {
   try {
