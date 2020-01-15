@@ -1,3 +1,5 @@
+// ***** CRUD operations on node completed *****
+
 const express = require("express");
 const router = express.Router();
 const Post = require("../models/Post");
