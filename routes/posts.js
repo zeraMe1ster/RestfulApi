@@ -44,7 +44,9 @@ router.get("/:postId", async (req, res) => {
 
 // TODO Delete a specific post
 
-router.delete("/:postId", async (req, res) => {});
+router.delete("/:postId", async (req, res) => {
+  // ? Testing git commit
+});
 
 // ! Example that leads us to /login/dashboard route
 // router.get("/dashboard", (req, res) => {
