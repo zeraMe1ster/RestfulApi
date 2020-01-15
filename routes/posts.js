@@ -53,6 +53,8 @@ router.delete("/:postId", async (req, res) => {
   }
 });
 
+// TODO Update / Patch part
+
 // ! Example that leads us to /login/dashboard route
 // router.get("/dashboard", (req, res) => {
 //   res.send("Dashboard Page !");
