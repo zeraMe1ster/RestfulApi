@@ -45,7 +45,12 @@ router.get("/:postId", async (req, res) => {
 // TODO Delete a specific post
 
 router.delete("/:postId", async (req, res) => {
-  // ? Testing git commit
+  try {
+    const removedPost = await Post.remove({ _id: req.params.postId });
+    res.json(removedPost);
+  } catch (err) {
+    res.json({ message: err });
+  }
 });
 
 // ! Example that leads us to /login/dashboard route
